@@ -14,16 +14,16 @@ class dog extends Animal{
   }
 }
 Object.defineProperties(Animal, {
-property1: {
+age: {
   value: 42,
   writable: true,
 },
 property2: {},
 });
 
-console.log(Animal.property1);
+console.log(Animal.age);
 var rex = new dog('rex');
 rex.speak();
 
-dog.property1 = 3;
-console.log(dog.property1 , Animal.property1);
+rex.age = 3;
+console.log(rex.age , Animal.age);
